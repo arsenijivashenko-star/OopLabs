@@ -1,12 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab6
 {
-    internal class Suggestion
+    public class Suggestion
     {
+        public void GenerateEssay(string topic)
+        {
+            Console.WriteLine($"[Suggestion] Автоматична генерація реферату на тему: {topic}");
+        }
+
+        public string GetRecommendedContent(int knowledgeLevel)
+        {
+            if (knowledgeLevel < 50) return "Базовий синтаксис та стандартні колекції (STL / C# Collections)";
+            return "Оптимізація " + "bare hardware" + " та кастомні алокатори пам'яті";
+        }
     }
 }
